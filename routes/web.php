@@ -32,3 +32,29 @@ Route::get('blog', function () {
 
 // Corrected route for the Coba controller
 Route::get('hello', [Coba::class, 'helloword']);
+
+// ============================================
+
+Route::get('tugas1', function () {
+    return view('tugas1');
+});
+
+Route::get('js1', function () {
+    return view('js1');
+});
+
+Route::get('js2', function () {
+    return view('js2');
+});
+
+Route::get('kodesoal2', function () {
+    return view('kodesoal2');
+});
+
+Route::get('linktree', function () {
+    return view('linktree');
+});
+
+Route::get('pertama', function () {
+    return view('pertama');
+});
