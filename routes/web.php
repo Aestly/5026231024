@@ -5,6 +5,7 @@ use App\Http\Controllers\Coba;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\BukutulisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,6 +63,20 @@ Route::post('/pegawai/update', [PegawaiDBController:: class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController:: class, 'hapus']);
 
 Route::get('/pegawai/cari', [PegawaiDBController:: class, 'cari']);
+
+//CRUD TUGAS WEEK 14
+Route::get('/bukutulis', [BukutulisController::class, 'index']);
+
+Route::get('/bukutulis/tambah', [BukutulisController::class, 'tambah']);
+Route::post('/bukutulis/store', [BukutulisController:: class, 'store']);
+
+Route::get('/bukutulis/edit/{id}', [BukutulisController::class, 'edit']);
+Route::post('/bukutulis/update', [BukutulisController:: class, 'update']);
+
+Route::get('/bukutulis/hapus/{id}', [BukutulisController:: class, 'hapus']);
+
+Route::get('/bukutulis/cari', [BukutulisController:: class, 'cari']);
+
 // ============================================
 
 Route::get('tugas1', function () {
