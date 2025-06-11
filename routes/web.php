@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\BukutulisController;
+use App\Http\Controllers\KaryawanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,6 +77,17 @@ Route::post('/bukutulis/update', [BukutulisController:: class, 'update']);
 Route::get('/bukutulis/hapus/{id}', [BukutulisController:: class, 'hapus']);
 
 Route::get('/bukutulis/cari', [BukutulisController:: class, 'cari']);
+
+# Week 15
+Route::get('/karyawan', [KaryawanController::class, 'index']);
+
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+
+Route::get('/karyawan/edit/{kp}', [KaryawanController::class, 'edit']);
+Route::post('/karyawan/update', [KaryawanController::class, 'update']);
+
+Route::get('/karyawan/hapus/{kp}', [KaryawanController::class, 'hapus']);
 
 // ============================================
 
