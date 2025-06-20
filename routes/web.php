@@ -7,6 +7,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\BukutulisController;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\CounterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,6 +89,9 @@ Route::get('/karyawan/edit/{kp}', [KaryawanController::class, 'edit']);
 Route::post('/karyawan/update', [KaryawanController::class, 'update']);
 
 Route::get('/karyawan/hapus/{kp}', [KaryawanController::class, 'hapus']);
+
+Route::get('counter', [CounterController::class, 'counter1']);
+
 
 // ============================================
 
