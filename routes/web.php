@@ -8,6 +8,7 @@ use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\BukutulisController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\CounterController;
+use App\Http\Controllers\NilaiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,6 +93,11 @@ Route::get('/karyawan/hapus/{kp}', [KaryawanController::class, 'hapus']);
 
 Route::get('counter', [CounterController::class, 'counter1']);
 
+Route::get('/eas', [NilaiController::class, 'nilai']);
+
+Route::get('/eas/tambah', [NilaiController::class, 'tambah']);
+Route::post('/eas/store', [NilaiController::class, 'store']);
+
 
 // ============================================
 
@@ -118,5 +124,4 @@ Route::get('linktree', function () {
 Route::get('pertama', function () {
     return view('pertama');
 });
-
 

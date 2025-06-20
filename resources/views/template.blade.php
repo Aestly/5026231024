@@ -47,6 +47,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Latihan 3</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/eas">Nilai</a>
+            </li>
         </ul>
     </nav>
     <br>
